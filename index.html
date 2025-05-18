@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Horóscopo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta tu Horóscopo</h1>
+        <form id="horoscopeForm">
+            <div class="form-group">
+                <label for="birthDate">Fecha de Nacimiento (DD-MM-AAAA):</label>
+                <input type="text" id="birthDate" placeholder="Ej: 15-05-1990">
+                <small class="error-message" id="dateError"></small>
+            </div>
+            <button type="button" id="consultBtn" disabled>Consultar</button>
+        </form>
+        <div id="horoscopeResult" class="hidden">
+            <h2>Tu horóscopo:</h2>
+            <p id="horoscopeText"></p>
+            <p id="horoscopeEmoji"></p>
+        </div>
+    </div>
+    
+    <!-- Importar scripts en el orden correcto -->
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
